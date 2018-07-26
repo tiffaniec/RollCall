@@ -2,15 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel= stylesheet href=roll_call_fonts.css>
-    <title>RollCall Pg3</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title> RollCall Pg3</title>
+
   </head>
-  <header>
+  <header class="tophead">
+
     <!-- <nav>
     <h1>RollCall</h1> <h3><a href = "#"> How to Use </a></h3>
     </nav> -->
+
+    </nav>
     <div class="topnav">
-      <a href="index.html">RollCall</a>
+      <a href="#">RollCall</a>
+      <a href="index.html">Home</a>
       <a href="HowItWorks.html">How to Use</a>
       <a href="contact.html">Contact Us</a>
       <a href="aboutUS.html">About</a>
@@ -23,7 +29,7 @@
   <div>
     <h2> Your Classmates</h2>
     <p>
-      Click the drop-down menu for the list of students in your class
+      <h4>Click the drop-down menu for the list of students in your class</h4>
       <br>
       Note: If you are the first person to input that class, there will be no classmates because there's no data for that class.
             Please check back later when more people have submitted their schedules.
@@ -31,10 +37,8 @@
   </div>
 
 
-<<<<<<< HEAD
+
   <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Period 1:</button>
-=======
   <button class="collapsible">Period 1</button>
   <div class="content">
     <p hresf="#">John D '19'</p>
@@ -85,62 +89,14 @@
 
 </body>
   <footer>
-    <h1>copyright stuff</h1> <h3><a href = "#"> faq's</h3>
+    reserved for copyrights and frequestly asked questions
+    <br>
+    Roll Call was created by Shreya Shriram, Melody Ma, Tiffanie Chau, and Jasmine Melgoza.
+
   </footer>
 </html>
 
-<style>
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-}
 
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-}
-
-.active, .collapsible:hover {
-    background-color: #555;
-}
-
-.content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
-
-</style>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
