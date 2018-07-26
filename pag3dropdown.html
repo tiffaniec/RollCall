@@ -9,11 +9,15 @@
     <!-- <nav>
     <h1>RollCall</h1> <h3><a href = "#"> How to Use </a></h3>
     </nav> -->
-<div class="topnav">
-  <a class="active" href="#home">RollCall</a>
-  <a href="#about">How to Use</a>
-</div>
+    <div class="topnav">
+      <a href="index.html">RollCall</a>
+      <a href="HowItWorks.html">How to Use</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="aboutUS.html">About</a>
+    </div>
   </header>
+
+
   <body>
 
   <div>
@@ -22,14 +26,58 @@
   </div>
 
 
+<<<<<<< HEAD
   <div class="dropdown">
     <button onclick="myFunction()" class="dropbtn">Period 1:</button>
+=======
+  <button class="collapsible">Period 1</button>
+  <div class="content">
+    <p hresf="#">John D '19'</p>
+    <p href="#">Jane D '20'</p>
+    <p href="#">Dolby Atmos '21'</p>
+    </div>
+  <button class="collapsible">Period 2</button>
+  <div class="content">
+    <p hresf="#">John D '19'</p>
+    <p href="#">Jane D '20'</p>
+    <p href="#">Dolby Atmos '21'</p>
+  </div>
+  <button class="collapsible">Periood 3</button>
+  <div class="content">
+    <p hresf="#">John D '19'</p>
+    <p href="#">Jane D '20'</p>
+    <p href="#">Dolby Atmos '21'</p>
+  </div>
+  <button class="collapsible">Period 4</button>
+  <div class="content">
+    <p hresf="#">John D '19'</p>
+    <p href="#">Jane D '20'</p>
+    <p href="#">Dolby Atmos '21'</p>
+  </div>
+  <button class="collapsible">Period 5</button>
+  <div class="content">
+    <p hresf="#">John D '19'</p>
+    <p href="#">Jane D '20'</p>
+    <p href="#">Dolby Atmos '21'</p>
+  </div>
+  <button class="collapsible">Period 6</button>
+  <div class="content">
+    <p hresf="#">John D '19'</p>
+    <p href="#">Jane D '20'</p>
+    <p href="#">Dolby Atmos '21'</p>
+  </div>
+
+  <!-- <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+>>>>>>> 8ad2a23fb42bbef09a88b6765b365714dd71640e
     <div id="myDropdown" class="dropdown-content">
-      <a href="#">John D '19'</a>
+      <a hresf="#">John D '19'</a>
       <a href="#">Jane D '20'</a>
       <a href="#">Dolby Atmos '21'</a>
-    </div>
+    </div> -->
   </div>
+
+
 </body>
   <footer>
     <h1>copyright stuff</h1> <h3><a href = "#"> faq's</h3>
@@ -64,7 +112,69 @@
     background-color: #4CAF50;
     color: white;
 }
-/*top nav bar
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+</style>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+// /* When the user clicks on the button,
+// toggle between hiding and showing the dropdown content */
+// function myFunction() {
+//     document.getElementById("myDropdown").classList.toggle("show");
+// }
+//
+// // Close the dropdown menu if the user clicks outside of it
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// }
+</script>
+
+<!-- /*top nav bar*/
 /* Dropdown Button */
 .dropbtn {
     background-color: #3498DB;
@@ -108,28 +218,4 @@
 .dropdown-content a:hover {background-color: #ddd}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-</style>
-
-<script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
+.show {display:block;} -->
