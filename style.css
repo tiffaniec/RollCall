@@ -1,0 +1,70 @@
+.tophead {
+  background-color: #8AA29E;
+  color: white;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  color:#686963;
+  background-color: white;
+
+}
+
+footer{
+  text-align: center;
+  font-size: 10px;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #8AA29E;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #F1EDEE;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #686963;
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.collapsible {
+    background-color: white;
+    color: #686963;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border-bottom: solid, #686963;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+}
+
+.active, .collapsible:hover {
+    background-color: #8AA29E;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+
+
+</style>
