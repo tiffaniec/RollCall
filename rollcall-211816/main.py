@@ -31,7 +31,7 @@ class MainHandler(webapp2.RequestHandler):
         if user: #true if user is logged in
             nickname = user.nickname() #nickname is email address before @
 
-            url = users.create_logout_url('/') #url to redirect to once logged out
+            url = users.create_logout_url('/pg2') #url to redirect to once logged out
             url_text = "logout" #the href text that will show on index.html
             # self.response.out.write(template.render(url = url, url_text = url_text, kind = type, name = user_name, items = items))
 
@@ -40,7 +40,7 @@ class MainHandler(webapp2.RequestHandler):
             url_text = "login"
 
         template = jinja_environment.get_template('index.html')
-        self.response.out.write(template.render())
+        self.response.out.write(template.render(url = url))
 
 
 class pg2Handler(webapp2.RequestHandler):
