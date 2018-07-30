@@ -24,21 +24,31 @@ template_directory = os.path.join(os.path.dirname(__file__), 'templates')
 #Create a Jinja environment object by passing it the template location
 jinja_environment = jinja2.Environment(loader = jinja2.FileSystemLoader(template_directory))
 
+class student(ndb.Model): #Define a person class
+    name = ndb.StringProperty() #Must specify the type the variable will be
+    grad_yr = ndb.IntegerProperty() #: this does not give them a value
+    sched = nbd.ListProperty()
+
+class course_block(nbd.Model):
+    course_name = nbd.StringProperty()
+    teacher_name = nbd.StringProperty()
+    period = nbd.IntegerProperty()
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user() #Check if logged in or not
-        
+
         if user: #true if user is logged in
             nickname = user.nickname() #nickname is email address before @
 
             url = users.create_logout_url('/pg2') #url to redirect to once logged out
             url_text = "logout" #the href text that will show on index.html
-            # self.response.out.write(template.render(url = url, url_text = url_text, kind = type, name = user_name, items = items))
-
+            # self.response.out.write(template.render(url = url, url_text = url_text, kind = type, name = user_name, items = items)
         else:
             url = users.create_login_url('/') #url to redirect to once logged in
             url_text = "login"
+
+        if user 
 
         template = jinja_environment.get_template('index.html')
         self.response.out.write(template.render(url = url))
