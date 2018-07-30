@@ -1,5 +1,9 @@
 body{
+<<<<<<< HEAD
   background-color: #8AA29E;
+=======
+  background-color:  #8AA29E;
+>>>>>>> 6f3bbabcab92f499d6e8d64e22f53eb9e9e4f7c5
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   padding:0;
@@ -10,9 +14,18 @@ header{
   color: white;
   text-align:center;
   font-family: 'Advent Pro', sans-serif;
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
 
+=======
+  margin-bottom: 2px  ;
+  padding: 0;
+}
+
+h1{
+  margin-bottom: 0;
+>>>>>>> 6f3bbabcab92f499d6e8d64e22f53eb9e9e4f7c5
 }
 
 input[type=text], select {
@@ -42,11 +55,18 @@ input[type=submit]:hover {
  .sign_in{
    margin-left: 30%;
    margin-right: 30%;
+<<<<<<< HEAD
+=======
+   margin-top: 0;
+>>>>>>> 6f3bbabcab92f499d6e8d64e22f53eb9e9e4f7c5
    border-radius: 5px;
    background-color: #f2f2f2;
    padding: 20px;
    width:300px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f3bbabcab92f499d6e8d64e22f53eb9e9e4f7c5
  }
 .botnav a{
   font-family: 'Open Sans', sans-serif;
