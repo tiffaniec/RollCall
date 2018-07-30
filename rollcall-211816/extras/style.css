@@ -1,7 +1,30 @@
-.tophead {
-  background-color: #8AA29E;
-  color: white;
+.topnav {
+    background-color: #8AA29E;
+    overflow: hidden;
 }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #F1EDEE;
+    color: #3D5467;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
 
 body{
 
@@ -16,33 +39,7 @@ footer{
   font-size: 10px;
 }
 /* Add a black background color to the top navigation */
-.topnav {
-    background-color: #8AA29E;
-    overflow: hidden;
-    display: inline-block;
-}
 
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: #F1EDEE;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #686963;
-    color: F1EDEE;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-}
 .collapsible {
     background-color: #F1EDEE;
     color: #686963;
@@ -55,7 +52,7 @@ footer{
     font-size: 20px;
     border-bottom: 3px solid #3D5467;
 }
-}
+
 
 .active, .collapsible:hover {
     background-color: #8AA29E;
@@ -72,7 +69,3 @@ h5{
   color: #3D5467;
   font-size: 20px
 }
-
-
-
-</style>
