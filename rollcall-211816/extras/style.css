@@ -6,7 +6,7 @@
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: #F1EDEE;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -26,7 +26,7 @@
 }
 i {
     border:#3D5467;
-    border-width: 0 3px 3px 0;
+    border-width: 3px 3px ;
     display: inline-block;
     padding: 3px;
 }
@@ -35,7 +35,6 @@ i {
     -webkit-transform: rotate(45deg);
 }
 body{
-
 
   font-family: 'Open Sans', sans-serif;
   color:#686963;
@@ -46,6 +45,14 @@ body{
 footer{
   text-align: center;
   font-size: 10px;
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F1EDEE;
+  color:#686963 ;
+  padding-left: 15px;
+  }
 }
 /* Add a black background color to the top navigation */
 
@@ -54,7 +61,7 @@ footer{
     color: #686963;
     cursor: pointer;
     padding: 18px;
-    width: 80%;
+    width: 10%;
     /* border-bottom: solid, #686963; */
     text-align: left;
     outline: none;
@@ -73,6 +80,8 @@ footer{
     overflow: hidden;
     background-color: #f1f1f1;
 }
+
+
 h5{
   background-color: #F1EDEE;
   color: #3D5467;
