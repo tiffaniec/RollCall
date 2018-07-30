@@ -37,6 +37,14 @@ body{
 footer{
   text-align: center;
   font-size: 10px;
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F1EDEE;
+  color:#686963 ;
+  padding-left: 15px;
+  }
 }
 /* Add a black background color to the top navigation */
 
@@ -64,6 +72,8 @@ footer{
     overflow: hidden;
     background-color: #f1f1f1;
 }
+
+
 h5{
   background-color: #F1EDEE;
   color: #3D5467;
