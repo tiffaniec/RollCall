@@ -2,23 +2,26 @@ body{
   background-color: #8AA29E;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-
+  padding:0;
+  margin:0;
 }
 header{
-  font-size: 50px;
+  font-size: 65px;
   color: white;
   text-align:center;
   font-family: 'Advent Pro', sans-serif;
-  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+
 }
 
 input[type=text], select {
-    width: 40%;
+    width: 50%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 6px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 1px;
     box-sizing: border-box;
 }
 
@@ -27,7 +30,7 @@ input[type=submit] {
     background-color: #686963;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 6px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -37,23 +40,31 @@ input[type=submit]:hover {
     background-color: #3D5467;
 }
  .sign_in{
+   margin-left: 30%;
+   margin-right: 30%;
    border-radius: 5px;
    background-color: #f2f2f2;
    padding: 20px;
+   width:300px;
 
  }
-.botnav{
+.botnav a{
   font-family: 'Open Sans', sans-serif;
-  color: white;
+  color: #686963;
   text-align: right;
+  padding-right: 25px;
+}
+.botnav{
+  text-align: right;
+
 }
 footer{
-  display: inline-block;
-  font-family: 'Open Sans', sans-serif;
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:60px;   /* Height of the footer */
-  
-
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #F1EDEE;
+   color:#686963 ;
+   text-align:left;
+  padding-left: 15px;
 }
