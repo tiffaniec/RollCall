@@ -18,8 +18,41 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        template = jinja_environment.get_template('index.html')
+        self.response.out.write(template.render())
+
+class pg2Handler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('pg2.html')
+        self.response.out.write(template.render())
+
+class pg3Handler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('pag3dropdown.html')
+        self.response.out.write(template.render())
+
+class AboutUsHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('aboutUS.html')
+        self.response.out.write(template.render())
+
+class ContactHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('contact.html')
+        self.response.out.write(template.render())
+
+class HowItWorksHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('howItWorks.html')
+        self.response.out.write(template.render())
+
+
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/pg2' pg2Handler),
+    ('/pg3', pg3Handler),
+    ('/AboutUs', AboutUsHandler),
+    ('/Contact', ContactHandler),
+    ('/howItWorks', HowItWorksHandler),
 ], debug=True)
