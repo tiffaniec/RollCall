@@ -1,5 +1,5 @@
 body{
-  background-color: #8AA29E;
+  background-color:  #8AA29E;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   padding:0;
@@ -10,9 +10,12 @@ header{
   color: white;
   text-align:center;
   font-family: 'Advent Pro', sans-serif;
-  margin: 0;
+  margin-bottom: 2px  ;
   padding: 0;
+}
 
+h1{
+  margin-bottom: 0;
 }
 
 input[type=text], select {
@@ -42,11 +45,11 @@ input[type=submit]:hover {
  .sign_in{
    margin-left: 30%;
    margin-right: 30%;
+   margin-top: 0;
    border-radius: 5px;
    background-color: #f2f2f2;
    padding: 20px;
    width:300px;
-
  }
 .botnav a{
   font-family: 'Open Sans', sans-serif;
