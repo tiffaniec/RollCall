@@ -16,7 +16,7 @@
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #F1EDEE;
-    color: #3D54;
+    color: #3D5467;
 }
 
 /* Add a color to the active/current link */
@@ -24,8 +24,16 @@
     background-color: #4CAF50;
     color: white;
 }
-
-
+i {
+    border:#3D5467;
+    border-width: 3px 3px ;
+    display: inline-block;
+    padding: 3px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
 body{
 
   font-family: 'Open Sans', sans-serif;
@@ -37,6 +45,14 @@ body{
 footer{
   text-align: center;
   font-size: 10px;
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F1EDEE;
+  color:#686963 ;
+  padding-left: 15px;
+  }
 }
 /* Add a black background color to the top navigation */
 
@@ -64,6 +80,8 @@ footer{
     overflow: hidden;
     background-color: #f1f1f1;
 }
+
+
 h5{
   background-color: #F1EDEE;
   color: #3D5467;
