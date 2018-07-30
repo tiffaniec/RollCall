@@ -42,6 +42,15 @@ class MainHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('index.html')
         self.response.out.write(template.render(url = url))
 
+class student(ndb.Model): #Define a person class
+    name = ndb.StringProperty() #Must specify the type the variable will be
+    grad_yr = ndb.IntegerProperty() #: this does not give them a value
+    sched = nbd.ListProperty()
+
+class course_block(nbd.Model):
+    course_name = nbd.StringProperty()
+    teacher_name = nbd.StringProperty()
+    period = nbd.IntegerProperty()
 
 class pg2Handler(webapp2.RequestHandler):
     def get(self):
