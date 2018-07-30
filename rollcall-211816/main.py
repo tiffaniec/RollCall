@@ -24,6 +24,15 @@ template_directory = os.path.join(os.path.dirname(__file__), 'templates')
 #Create a Jinja environment object by passing it the template location
 jinja_environment = jinja2.Environment(loader = jinja2.FileSystemLoader(template_directory))
 
+class student(ndb.Model): #Define a person class
+    name = ndb.StringProperty() #Must specify the type the variable will be
+    grad_yr = ndb.IntegerProperty() #: this does not give them a value
+    sched = nbd.ListProperty()
+
+class course_block(nbd.Model):
+    course_name = nbd.StringProperty()
+    teacher_name = nbd.StringProperty()
+    period = nbd.IntegerProperty()
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -39,18 +48,11 @@ class MainHandler(webapp2.RequestHandler):
             url = users.create_login_url('/') #url to redirect to once logged in
             url_text = "login"
 
+        if user 
+
         template = jinja_environment.get_template('index.html')
         self.response.out.write(template.render(url = url))
 
-class student(ndb.Model): #Define a person class
-    name = ndb.StringProperty() #Must specify the type the variable will be
-    grad_yr = ndb.IntegerProperty() #: this does not give them a value
-    sched = nbd.ListProperty()
-
-class course_block(nbd.Model):
-    course_name = nbd.StringProperty()
-    teacher_name = nbd.StringProperty()
-    period = nbd.IntegerProperty()
 
 class pg2Handler(webapp2.RequestHandler):
     def get(self):
