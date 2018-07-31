@@ -1,6 +1,13 @@
+div {
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+
 .topnav {
     background-color: #8AA29E;
     overflow: hidden;
+    width: 100%;
 }
 
 /* Style the links inside the navigation bar */
@@ -105,13 +112,18 @@
     -webkit-transform: rotate(45deg);
 }
 body{
-
-
   font-family: 'Open Sans', sans-serif;
   color:#686963;
   background-color: white;
 
 }
+
+.intro {
+  margin-right: 150px;
+  margin-left: 80px;
+
+}
+
 #per1.text{
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
