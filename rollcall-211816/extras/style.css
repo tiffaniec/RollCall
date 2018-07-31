@@ -24,7 +24,20 @@
     background-color: #4CAF50;
     color: white;
 }
+.logoutButton{
+  background-color: Transparent;
+  border-width: thin;
+  border-color: #3D5467;
+  color: #3D5467;
+  text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
 
+.logoutButton:hover{
+  background-color: #3D5467;
+  color:white;
+  
+}
 .button {
     background-color: #F1EDEE;
     border: none;
