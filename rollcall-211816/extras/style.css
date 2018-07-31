@@ -37,7 +37,6 @@
   margin-top: 1%;
   margin-bottom: 1%;
 }
-<<<<<<< HEAD
 
 .logoutButton:hover{
   background-color: #3D5467;
@@ -64,14 +63,14 @@
       background-color: #BEBBBC;
       border: none;
     }
-=======
+
 
 .logoutButton:hover{
   background-color: #3D5467;
   color:white;
 
 }
->>>>>>> f7849d0bfe4a9c1afd3dbe45406c8d10077012f3
+
 .button {
     background-color: #F1EDEE;
     border: none;
