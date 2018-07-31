@@ -33,13 +33,15 @@
     <div class="class_entry">
 
       <div class="gradDrop">
-        <select>
-          <option name = "val" value="" disabled selected>Graduation Year</option>
-          <option gradYr="2019">2019</option>
-          <option gradYr="2020">2020</option>
-          <option gradYr="2021">2021</option>
-          <option gradyr="2022">2022</option>
-        </select>
+        <form action="/pg2?grad_yr=input_grad_yr" method="post">
+          <select name="input_grad_yr" form="grad_dd" >
+            <option value="" disabled selected>Graduation Year</option>
+            <option gradYr="2019">2019</option>
+            <option gradYr="2020">2020</option>
+            <option gradYr="2021">2021</option>
+            <option gradyr="2022">2022</option>
+          </select>
+        </form>
       </div>
 
       <div class="classInputCont">

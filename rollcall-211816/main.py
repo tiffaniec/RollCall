@@ -47,25 +47,25 @@ class MainHandler(webapp2.RequestHandler):
 
             q_usr_exist = student.query(student.name == nickname)
             if q_usr_exist == None:
-                std_current = student()
+                std_current = student(name = nickname)
 
             else:
-                curr_std = q_usr_exist.get()
-
+                std_current = q_usr_exist.get()
 
         else:
-            url = users.create_login_url('/pg2s') #url to redirect to once logged in
+            url = users.create_login_url('/pg2') #url to redirect to once logged in
             url_text = "login"
-
-
-
-
 
         template = jinja_environment.get_template('index.html')
         self.response.out.write(template.render(url = url))
 
 
 class pg2Handler(webapp2.RequestHandler):
+    def post(self):
+
+        grad_yr = self.request.get('input_grad_yr')
+        grad_yr = std_current.student()
+
     def get(self):
         template = jinja_environment.get_template('pg2.html')
         self.response.out.write(template.render())
