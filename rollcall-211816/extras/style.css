@@ -5,6 +5,7 @@
 
 /* Style the links inside the navigation bar */
 .topnav a {
+    width:100%;
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -142,6 +143,7 @@ footer{
     outline: none;
     font-size: 20px;
     border-bottom: 3px solid #3D5467;
+    width: 100%
 }
 
 
