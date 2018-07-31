@@ -90,8 +90,6 @@ class HowItWorksHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('howItWorks.html')
         self.response.out.write(template.render())
 
-
-
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/pg2', pg2Handler),
