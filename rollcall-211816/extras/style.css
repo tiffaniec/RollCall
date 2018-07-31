@@ -34,6 +34,12 @@
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+
+.logoutButton{
+  border-width: medium;
+  border-color: #3D5467;
+  align-self: right;
+}
 body{
 
 
