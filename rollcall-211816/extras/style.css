@@ -57,6 +57,9 @@ body{
   background-color: #F1EDEE;
 
 }
+#per1 {
+  display: inline-block;
+}
 
 footer{
   position: fixed;
