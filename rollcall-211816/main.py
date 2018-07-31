@@ -27,12 +27,12 @@ jinja_environment = jinja2.Environment(loader = jinja2.FileSystemLoader(template
 class student(ndb.Model): #Define a person class
     name = ndb.StringProperty() #Must specify the type the variable will be
     grad_yr = ndb.IntegerProperty() #: this does not give them a value
-    sched = nbd.ListProperty()
+    schedule = ndb.StringProperty(repeated = True)
 
-class course_block(nbd.Model):
-    course_name = nbd.StringProperty()
-    teacher_name = nbd.StringProperty()
-    period = nbd.IntegerProperty()
+class course_block(ndb.Model):
+    course_name = ndb.StringProperty()
+    teacher_name = ndb.StringProperty()
+    period = ndb.IntegerProperty()
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -41,14 +41,25 @@ class MainHandler(webapp2.RequestHandler):
         if user: #true if user is logged in
             nickname = user.nickname() #nickname is email address before @
 
-            url = users.create_logout_url('/pg2') #url to redirect to once logged out
+            url = users.create_logout_url('/') #url to redirect to once logged out
             url_text = "logout" #the href text that will show on index.html
             # self.response.out.write(template.render(url = url, url_text = url_text, kind = type, name = user_name, items = items)
+
+            q_usr_exist = student.query(student.name == nickname)
+            if q_usr_exist == None:
+                std_current = student()
+
+            else:
+                curr_std = q_usr_exist.get()
+
+
         else:
-            url = users.create_login_url('/') #url to redirect to once logged in
+            url = users.create_login_url('/pg2s') #url to redirect to once logged in
             url_text = "login"
 
-        if user 
+
+
+
 
         template = jinja_environment.get_template('index.html')
         self.response.out.write(template.render(url = url))
