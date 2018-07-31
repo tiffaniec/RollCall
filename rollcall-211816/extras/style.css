@@ -25,7 +25,7 @@
     color: white;
 }
 
-.button {
+a.button {
     background-color: #F1EDEE;
     border: none;
     color: #3D5467;
@@ -38,6 +38,8 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+
+}
     }
   .button:hover {
       background-color: #686963;
