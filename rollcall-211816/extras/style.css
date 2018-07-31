@@ -24,32 +24,34 @@
     background-color: #4CAF50;
     color: white;
 }
-<<<<<<< HEAD
-a.buttonContinue{
-    background-color: #F1EDEE;
-    border: none;
-    color: #3D5467;
-    padding: 15px 25px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-.addAClassButton {
-=======
+.logoutButton{
+  background-color: Transparent;
+  border-width: thin;
+  border-color: #3D5467;
+  color: #3D5467;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  float: right;
+  margin-right: 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
 
-.button {
->>>>>>> d8a38dda66fd94e52e5841e63861e3bc4d230185
+.logoutButton:hover{
+  background-color: #3D5467;
+  color:white;
+
+}
+.contButton {
     background-color: #F1EDEE;
     border: none;
-    color: #3D5467;
+    color: blue;
     padding: 15px 25px;
     text-align: center;
     font-size: 16px;
+    float:right;
+    margin-right: 5%;
     cursor: pointer;
     display: inline-block;
     margin: 4px 2px;
@@ -57,8 +59,29 @@ a.buttonContinue{
     transition-duration: 0.4s;
     cursor: pointer;
     }
+.contButton:hover {
+      background-color: #BEBBBC;
+      border: none;
+    }
+.button {
+    background-color: #F1EDEE;
+    border: none;
+    color: #3D5467;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    float:right;
+    margin-right: 5%;
+    }
   .button:hover {
       background-color: #686963;
+      color:white;
       border: none;
     }
 
@@ -77,7 +100,16 @@ body{
 
   font-family: 'Open Sans', sans-serif;
   color:#686963;
-  background-color: #F1EDEE;
+  background-color: white;
+
+}
+#per1.text{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+#per1{
+  display: inline-block;
+  float: none;
 
 }
 
