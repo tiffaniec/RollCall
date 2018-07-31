@@ -70,6 +70,12 @@ class pg2Handler(webapp2.RequestHandler):
         grad_yr = self.request.get('input_grad_yr')
         grad_yr = current_student.student()
 
+        student.schedule.append(self.request.get("1_c", "1_t"))
+        student.schedule.append(self.request.get("2_c", "2_t"))
+        student.schedule.append(self.request.get("3_c", "3_t"))
+        student.schedule.append(self.request.get("4_c", "4_t"))
+        student.schedule.append(self.request.get("5_c", "5_t"))
+        student.schedule.append(self.request.get("6_c", "6_t"))
 
     def get(self):
         logout_url = users.create_logout_url('/')
