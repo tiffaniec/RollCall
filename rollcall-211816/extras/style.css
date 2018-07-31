@@ -25,7 +25,7 @@
     color: white;
 }
 
-a.button {
+.button {
     background-color: #F1EDEE;
     border: none;
     color: #3D5467;
@@ -38,8 +38,6 @@ a.button {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-
-}
     }
   .button:hover {
       background-color: #686963;
@@ -56,21 +54,6 @@ a.button {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
-.logoutButton:hover{
-  background-color: #3D5467;
-  color:white;
-}
-.logoutButton{
-  border-width: thin;
-  border-color: #3D5467;
-  background-color: Transparent;
-  color: #3D5467;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  font-size: 15px;
-  padding-top: 5px;
-  padding-right: 10px;
-}
 body{
 
 
@@ -78,9 +61,6 @@ body{
   color:#686963;
   background-color: #F1EDEE;
 
-}
-#per1 {
-  display: inline-block;
 }
 
 footer{
