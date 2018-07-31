@@ -19,6 +19,12 @@ import webapp2, os, jinja2
 from google.appengine.api import users #Google login
 from google.appengine.ext import ndb #Cloud storage
 
+
+def get_user():
+    user = users.get_current_user() #Check if logged in or not
+    userQuery = student.query(student.name == user.nickname)
+    return userQuery.get()
+
 #Say where you are keeping your HTML templates for Jinja2
 template_directory = os.path.join(os.path.dirname(__file__), 'templates')
 #Create a Jinja environment object by passing it the template location
@@ -36,39 +42,39 @@ class course_block(ndb.Model):
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        user = users.get_current_user() #Check if logged in or not
+        user = users.get_current_user()
 
         if user: #true if user is logged in
             nickname = user.nickname() #nickname is email address before @
 
-            url = users.create_logout_url('/') #url to redirect to once logged out
-            url_text = "logout" #the href text that will show on index.html
-            # self.response.out.write(template.render(url = url, url_text = url_text, kind = type, name = user_name, items = items)
+            # url = users.create_logout_url('/') #url to redirect to once logged out
+            #  #the href text that will show on index.html
+            # # self.response.out.write(template.render(url = url, url_text = url_text, kind = type, name = user_name, items = items)
 
             q_usr_exist = student.query(student.name == nickname)
-            if q_usr_exist == None:
-                std_current = student()
+            if q_usr_exist.get() is None:
+                std_current = student(name = nickname)
+                self.redirect("/pg2")
 
             else:
-                curr_std = q_usr_exist.get()
-
+                self.redirect("/pg2")
 
         else:
-            url = users.create_login_url('/pg2s') #url to redirect to once logged in
-            url_text = "login"
-
-
-
-
-
-        template = jinja_environment.get_template('index.html')
-        self.response.out.write(template.render(url = url))
-
+            url = users.create_login_url('/') #url to redirect to once logged in
+            template = jinja_environment.get_template('index.html')
+            self.response.out.write(template.render(url = url))
 
 class pg2Handler(webapp2.RequestHandler):
+    def post(self):
+
+        grad_yr = self.request.get('input_grad_yr')
+        grad_yr = current_student.student()
+
+
     def get(self):
+        logout_url = users.create_logout_url('/')
         template = jinja_environment.get_template('pg2.html')
-        self.response.out.write(template.render())
+        self.response.out.write(template.render(url = logout_url))
 
 class pg3Handler(webapp2.RequestHandler):
     def get(self):
