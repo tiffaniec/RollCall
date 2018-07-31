@@ -24,8 +24,55 @@
     background-color: #4CAF50;
     color: white;
 }
+.logoutButton{
+  background-color: Transparent;
+  border-width: thin;
+  border-color: #3D5467;
+  color: #3D5467;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  float: right;
+  margin-right: 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+<<<<<<< HEAD
 
-a.button {
+.logoutButton:hover{
+  background-color: #3D5467;
+  color:white;
+
+}
+.contButton {
+    background-color: #F1EDEE;
+    border: none;
+    color: blue;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    float:right;
+    margin-right: 5%;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }
+.contButton:hover {
+      background-color: #BEBBBC;
+      border: none;
+    }
+=======
+
+.logoutButton:hover{
+  background-color: #3D5467;
+  color:white;
+
+}
+>>>>>>> f7849d0bfe4a9c1afd3dbe45406c8d10077012f3
+.button {
     background-color: #F1EDEE;
     border: none;
     color: #3D5467;
@@ -38,11 +85,12 @@ a.button {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-
-}
+    float:right;
+    margin-right: 5%;
     }
   .button:hover {
       background-color: #686963;
+      color:white;
       border: none;
     }
 
@@ -56,31 +104,22 @@ a.button {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
-.logoutButton:hover{
-  background-color: #3D5467;
-  color:white;
-}
-.logoutButton{
-  border-width: thin;
-  border-color: #3D5467;
-  background-color: Transparent;
-  color: #3D5467;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  font-size: 15px;
-  padding-top: 5px;
-  padding-right: 10px;
-}
 body{
 
 
   font-family: 'Open Sans', sans-serif;
   color:#686963;
-  background-color: #F1EDEE;
+  background-color: white;
 
 }
-#per1 {
+#per1.text{
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+#per1{
   display: inline-block;
+  float: none;
+
 }
 
 footer{
