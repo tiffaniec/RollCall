@@ -24,8 +24,21 @@
     background-color: #4CAF50;
     color: white;
 }
-
-a.button {
+a.buttonContinue{
+    background-color: #F1EDEE;
+    border: none;
+    color: #3D5467;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+.addAClassButton {
     background-color: #F1EDEE;
     border: none;
     color: #3D5467;
