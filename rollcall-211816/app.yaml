@@ -8,11 +8,14 @@ handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
+  secure: always
 - url: /extras
   static_dir: extras
+  secure: always
 
 - url: .*
   script: main.app
+  secure: always
 
 libraries:
 - name: webapp2
