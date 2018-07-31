@@ -22,7 +22,7 @@
       <a href='/howItWorks'>How to Use</a>
       <a href='/Contact'>Contact Us</a>
       <a href='/AboutUs'>About</a>
-      <button type="button" class="logoutButton" style="float: right" onclick="">Logout</button>
+      <a href="{{ url }}"><button type="button" class="logoutButton" style="float: right" onclick="">Logout</button></a>
     </div>
   </header>
 
@@ -50,12 +50,11 @@
 <!---->
         <div id="per1">
           <h4>Period 1</h4>
-          <form>
+          <form action="/output?data=userInput" method="post">
             <input type="text" name="field1" placeholder="Class Name" />
             <input type="text" name="field2" placeholder="Teacher" />
           </form>
         </div>
-<<<<<<< HEAD
       </div>
     </div>
 
@@ -83,8 +82,6 @@
             Roll Call was created by Shreya Shriram, Melody Ma, Tiffanie Chau, and Jasmine Melgoza.
           </footer>
         </html>
-=======
->>>>>>> 8936af20a34553e7087eed0a6ade231cdf753940
 
         <div id="per2">
           <h4>Period 2</h4>
