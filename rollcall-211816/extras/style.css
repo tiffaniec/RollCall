@@ -1,10 +1,18 @@
+div {
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+
 .topnav {
     background-color: #8AA29E;
     overflow: hidden;
+    width: 100%;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
+
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -37,7 +45,6 @@
   margin-top: 1%;
   margin-bottom: 1%;
 }
-<<<<<<< HEAD
 
 .logoutButton:hover{
   background-color: #3D5467;
@@ -88,10 +95,10 @@
     float:right;
     margin-right: 5%;
     }
-.button:hover {
-    background-color: #686963;
-    color:white;
-    border: none;
+  .button:hover {
+      background-color: #686963;
+      color:white;
+      border: none;
     }
 
 .i {
@@ -105,13 +112,18 @@
     -webkit-transform: rotate(45deg);
 }
 body{
-
-
   font-family: 'Open Sans', sans-serif;
   color:#686963;
   background-color: white;
 
 }
+
+.intro {
+  margin-right: 150px;
+  margin-left: 80px;
+
+}
+
 #per1.text{
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
@@ -143,6 +155,7 @@ footer{
     outline: none;
     font-size: 20px;
     border-bottom: 3px solid #3D5467;
+    width: 100%
 }
 
 
