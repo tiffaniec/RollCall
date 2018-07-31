@@ -24,6 +24,28 @@
     background-color: #4CAF50;
     color: white;
 }
+
+a.button {
+    background-color: #F1EDEE;
+    border: none;
+    color: #3D5467;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+    }
+  .button:hover {
+      background-color: #686963;
+      border: none;
+    }
+
 .i {
     border:#3D5467;
     border-width: 0 3px 3px 0;
@@ -56,6 +78,9 @@ body{
   color:#686963;
   background-color: #F1EDEE;
 
+}
+#per1 {
+  display: inline-block;
 }
 
 footer{
