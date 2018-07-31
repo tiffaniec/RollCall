@@ -24,6 +24,7 @@
     background-color: #4CAF50;
     color: white;
 }
+<<<<<<< HEAD
 a.buttonContinue{
     background-color: #F1EDEE;
     border: none;
@@ -39,6 +40,10 @@ a.buttonContinue{
     cursor: pointer;
   }
 .addAClassButton {
+=======
+
+.button {
+>>>>>>> d8a38dda66fd94e52e5841e63861e3bc4d230185
     background-color: #F1EDEE;
     border: none;
     color: #3D5467;
@@ -51,8 +56,6 @@ a.buttonContinue{
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-
-}
     }
   .button:hover {
       background-color: #686963;
@@ -69,21 +72,6 @@ a.buttonContinue{
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
-.logoutButton:hover{
-  background-color: #3D5467;
-  color:white;
-}
-.logoutButton{
-  border-width: thin;
-  border-color: #3D5467;
-  background-color: Transparent;
-  color: #3D5467;
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  font-size: 15px;
-  padding-top: 5px;
-  padding-right: 10px;
-}
 body{
 
 
@@ -91,9 +79,6 @@ body{
   color:#686963;
   background-color: #F1EDEE;
 
-}
-#per1 {
-  display: inline-block;
 }
 
 footer{
