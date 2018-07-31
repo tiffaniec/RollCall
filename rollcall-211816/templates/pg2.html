@@ -33,7 +33,7 @@
     <div class="class_entry">
 
       <div class="gradDrop">
-        <select>
+        <select >
           <option value="" disabled selected>Graduation Year</option>
           <option gradYr="2019">2019</option>
           <option gradYr="2020">2020</option>
@@ -47,12 +47,39 @@
         <div id="per1">
           <h4>Period 1</h4>
           <form>
-            <input type="text" name="field1" placeholder="Class Name" />
-            <input type="text" name="field2" placeholder="Teacher" />
+            <input type="text" name="input_c" placeholder="Class Name" />
+            <input type="text" name="input_t" placeholder="Teacher" />
           </form>
         </div>
+      </div>
+    </div>
 
-        <div id="per2">
+    <button onclick="myFunction()">Add a period</button>
+
+    <script>
+    function myFunction() {
+        document.getElementById("input_t").value = document.getElementById("input_c").value;
+    }
+    </script>
+          </div>
+
+      <div id="contbut">
+        <a href='/pg3'>continue</a>
+
+
+          </body>
+          <footer>
+            reserved for copyrights and frequestly asked questions
+            <br>
+            Roll Call was created by Shreya Shriram, Melody Ma, Tiffanie Chau, and Jasmine Melgoza.
+          </footer>
+        </html>
+
+
+
+
+
+        <!-- <div id="per2">
           <h4>Period 2</h4>
           <form>
             <input type="text" name="field1" placeholder="Class Name" />
@@ -89,20 +116,6 @@
           <form>
             <input type="text" name="field1" placeholder="Class Name" />
             <input type="text" name="field2" placeholder="Teacher" />
-            <!-- <h5> <input type="text" name="field2" placeholder="Teacher" /></h5> -->
-          </form>
-        </div>
-
-      </div>
-    </div>
-    <div id="contbut">
-      <a href='/pg3'>continue</a>
-    </div>
-  </body>
-
-  <footer>
-    reserved for copyrights and frequestly asked questions
-    <br>
-    Roll Call was created by Shreya Shriram, Melody Ma, Tiffanie Chau, and Jasmine Melgoza.
-  </footer>
-</html>
+            <h5> <input type="text" name="field2" placeholder="Teacher" /></h5> -->
+          <!-- </form>
+        </div> -->
