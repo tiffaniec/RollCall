@@ -160,7 +160,6 @@ footer{
     width: 100%
 }
 
-
 .active, .collapsible:hover {
     background-color: #8AA29E;
     color: white;
@@ -173,7 +172,7 @@ footer{
     background-color: #f1f1f1;
 }
 h5{
-  background-color: #F1EDEE;
+  background-color: #white;
   color: #3D5467;
   font-size: 20px
 }
