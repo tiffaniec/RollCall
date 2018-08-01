@@ -25,9 +25,11 @@ template_directory = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_environment = jinja2.Environment(loader = jinja2.FileSystemLoader(template_directory))
 
 class Student(ndb.Model): #Define a person class
+    classID = ndb.IntegerProperty()
     name = ndb.StringProperty() #Must specify the type the variable will be
     grad_yr = ndb.IntegerProperty() #: this does not give them a value
     schedule = ndb.StringProperty(repeated = True)
+    teacher = ndb.StringProperty(repeated = True)
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -42,7 +44,7 @@ class MainHandler(webapp2.RequestHandler):
 
             q_usr_exist = Student.query(Student.name == nickname)
             if q_usr_exist.get() is None:
-                std_current = Student(name = nickname, schedule =[])
+                std_current = Student(name = nickname, schedule =[], classID = 1, teacher =[])
                 std_current.put()
                 self.redirect("/pg2")
 
@@ -74,16 +76,43 @@ class pg3Handler(webapp2.RequestHandler):
         user = self.get_user()
         grad_yr = self.request.get('input_grad_yr')
 
+        a_1c = self.request.get('input_1c')
+        a_1t = self.request.get('input_1t')
+        a_2c = self.request.get('input_2c')
+        a_2t = self.request.get('input_2t')
+        a_3c = self.request.get('input_3c')
+        a_3t = self.request.get('input_3t')
+        a_4c = self.request.get('input_4c')
+        a_4t = self.request.get('input_4t')
+        a_5c = self.request.get('input_5c')
+        a_5t = self.request.get('input_5t')
+        a_6c = self.request.get('input_6c')
+        a_6t = self.request.get('input_6t')
 
-        user.schedule.append(self.request.get("_1c", "input_1t"))
-        user.schedule.append(self.request.get("input_2c", "input_2t"))
-        user.schedule.append(self.request.get("input_3c", "input_3t"))
-        user.schedule.append(self.request.get("input_4c", "input_4t"))
-        user.schedule.append(self.request.get("input_5c", "input_5t"))
-        user.schedule.append(self.request.get("input_6c", "input_6t"))
+        user.schedule.append(a_1c)
+        user.schedule.append(a_2c)
+        user.schedule.append(a_3c)
+        user.schedule.append(a_4c)
+        user.schedule.append(a_5c)
+        user.schedule.append(a_6c)
 
+        user.teacher.append(a_1t)
+        user.teacher.append(a_2t)
+        user.teacher.append(a_3t)
+        user.teacher.append(a_4t)
+        user.teacher.append(a_5t)
+        user.teacher.append(a_6t)
+
+
+        print(user.teacher)
+        print(user.schedule)
         user.put()
 
+
+        # 
+        # all_students = Students.query(Student.classID == 1)
+        # current_student = self.get_user()
+        # user_sched = current_student.schedule
 
 
     def get(self):
