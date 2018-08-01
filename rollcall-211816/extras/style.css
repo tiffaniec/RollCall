@@ -1,6 +1,6 @@
 div {
     margin-right: 150px;
-    margin-left: 80px;
+    margin-left: 0px;
 }
 
 
@@ -20,7 +20,53 @@ div {
     text-decoration: none;
     font-size: 17px;
 }
+label{
+  padding-right: 15px;
+}
+input{
+  padding-right: 35px;
+  width:160px;
+  height: 30px;
+  font-size: 15px;
+  margin-left: 20px;
 
+}
+#per1{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 5%;
+}
+#per2{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 5%;
+}
+#per3{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 5%;
+}
+#per4{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 5%;
+}
+#per5{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 5%;
+}
+#per6{
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 5%;
+}
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: #F1EDEE;
@@ -59,6 +105,8 @@ div {
     text-align: center;
     font-size: 16px;
     float:right;
+    position: fixed;
+    bottom:10px;
     margin-right: 5%;
     cursor: pointer;
     display: inline-block;
@@ -78,7 +126,11 @@ div {
   color:white;
 
 }
-
+select{
+  width:140px;
+  height: 25px;
+  font-size: 15px;
+}
 .button {
     background-color: #F1EDEE;
     border: none;
@@ -94,14 +146,22 @@ div {
     cursor: pointer;
     float:right;
     margin-right: 5%;
+    margin-bottom: 10%;
     }
   .button:hover {
       background-color: #686963;
       color:white;
       border: none;
     }
-
-.i {
+  .triangle-down {
+  	width: 0;
+  	height: 0;
+    display: inline-block;
+  	border-left: 20px solid#555;
+  	border-right: 20px solid#555;
+  	border-top: 50px solid transparent;
+  }
+i {
     border:#3D5467;
     border-width: 0 3px 3px 0;
     display: inline-block;
@@ -118,20 +178,29 @@ body{
 
 }
 
-.intro {
+ .intro {
   margin-right: 150px;
-  margin-left: 80px;
+  margin-left: 20px;
 
 }
-
-#per1.text{
+.class_entry{
+  padding-left: 20px;
+}
+/* #per1.text{
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
 }
 #per1{
+
   display: inline-block;
   float: none;
 
+} */
+
+.input_t label, .input_t input {
+    float: none; /* if you had floats before? otherwise inline-block will behave differently */
+    display: inline-block;
+    vertical-align: middle;
 }
 
 footer{
@@ -157,7 +226,20 @@ footer{
     border-bottom: 3px solid #3D5467;
     width: 100%
 }
-
+.v{
+  display:inline-block;
+  font-size: 25px;
+  float: right;
+  color: #3D5467;
+  margin-right: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+.v:hover{
+  display:inline-block;
+  font-size: 25px;
+  float: right;
+  color: white;
+}
 
 .active, .collapsible:hover {
     background-color: #8AA29E;
@@ -171,7 +253,7 @@ footer{
     background-color: #f1f1f1;
 }
 h5{
-  background-color: #F1EDEE;
+  background-color: #white;
   color: #3D5467;
   font-size: 20px
 }

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../extras/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <title>RollCall Page2</title>
-  </head>
 
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../extras/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <title>RollCall Page2</title>
+</head>
+
+
+<body body style="margin:0;padding:0">
   <header>
     <div class="topnav">
       <a href='#'>RollCall</a>
@@ -17,22 +20,52 @@
       <button type="button" class="logoutButton" onclick="">Logout</button>
     </div>
   </header>
+  <div class="intro">
+    <h2>Hi John</h2>
+    <p>Input your <strong>2018-19</strong> course schedule. Be sure to include all your information the same way it's written on your schedule.</p>
+  </div>
 
-  <body body style="margin:0;padding:0">
-    <div class="intro">
-      <h2>Hi John</h2>
-      <p>Input your <strong>2018-19</strong> course schedule. Be sure to include all your information the same way it's written on your schedule.</p>
-    </div>
-
-    <div class="class_entry">
-      <div class="gradDrop">
-        <select >
+  <div class="class_entry">
+    <div class="gradDrop">
+      <select>
           <option value="" disabled selected>Graduation Year</option>
           <option gradYr="2019">2019</option>
           <option gradYr="2020">2020</option>
           <option gradYr="2021">2021</option>
           <option gradyr="2022">2022</option>
         </select>
+
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("input_t").value = document.getElementById("input_c").value;
+      }
+    </script>
+
+    <div class="classInputCont">
+      <div id="per1">
+        <form>
+          <label for="input_t"for="input_c">Period 1</label>
+          <input type="text" name="input_c" placeholder="Class Name" />
+          <input type="text" name="input_t" placeholder="Teacher" />
+        </form>
+      </div>
+
+      <div id="per2">
+        <form>
+          <label for="input_t"for="input_c">Period 2</label>
+          <input type="text" name="input_c" placeholder="Class Name" />
+          <input type="text" name="input_t" placeholder="Teacher" />
+        </form>
+      </div>
+
+      <div id="per3">
+        <form>
+          <label for="input_t"for="input_c">Period 3</label>
+          <input type="text" name="input_c" placeholder="Class Name" />
+          <input type="text" name="input_t" placeholder="Teacher" />
+        </form>
       </div>
 
       <div class="classInputCont">
