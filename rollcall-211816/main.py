@@ -19,26 +19,15 @@ import webapp2, os, jinja2
 from google.appengine.api import users #Google login
 from google.appengine.ext import ndb #Cloud storage
 
-
-def get_user():
-    user = users.get_current_user() #Check if logged in or not
-    userQuery = student.query(student.name == user.nickname)
-    return userQuery.get()
-
 #Say where you are keeping your HTML templates for Jinja2
 template_directory = os.path.join(os.path.dirname(__file__), 'templates')
 #Create a Jinja environment object by passing it the template location
 jinja_environment = jinja2.Environment(loader = jinja2.FileSystemLoader(template_directory))
 
-class student(ndb.Model): #Define a person class
+class Student(ndb.Model): #Define a person class
     name = ndb.StringProperty() #Must specify the type the variable will be
     grad_yr = ndb.IntegerProperty() #: this does not give them a value
     schedule = ndb.StringProperty(repeated = True)
-
-class course_block(ndb.Model):
-    course_name = ndb.StringProperty()
-    teacher_name = ndb.StringProperty()
-    period = ndb.IntegerProperty()
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -51,13 +40,14 @@ class MainHandler(webapp2.RequestHandler):
             #  #the href text that will show on index.html
             # # self.response.out.write(template.render(url = url, url_text = url_text, kind = type, name = user_name, items = items)
 
-            q_usr_exist = student.query(student.name == nickname)
+            q_usr_exist = Student.query(Student.name == nickname)
             if q_usr_exist.get() is None:
-                std_current = student(name = nickname)
+                std_current = Student(name = nickname, schedule =[])
+                std_current.put()
                 self.redirect("/pg2")
 
             else:
-                self.redirect("/pg2")
+                self.redirect("/pg3")
 
         else:
             url = users.create_login_url('/') #url to redirect to once logged in
@@ -65,11 +55,6 @@ class MainHandler(webapp2.RequestHandler):
             self.response.out.write(template.render(url = url))
 
 class pg2Handler(webapp2.RequestHandler):
-    def post(self):
-
-        grad_yr = self.request.get('input_grad_yr')
-        grad_yr = current_student.student()
-
 
     def get(self):
         logout_url = users.create_logout_url('/')
@@ -77,8 +62,32 @@ class pg2Handler(webapp2.RequestHandler):
         self.response.out.write(template.render(url = logout_url))
 
 class pg3Handler(webapp2.RequestHandler):
+    def get_user(self):
+        currentUser = users.get_current_user() #Check if logged in or not
+        nickname = currentUser.nickname()
+        print(nickname)
+        query = Student.query(Student.name == nickname)
+        return query.get()
+
+    def post(self):
+
+        user = self.get_user()
+        grad_yr = self.request.get('input_grad_yr')
+
+
+        user.schedule.append(self.request.get("_1c", "input_1t"))
+        user.schedule.append(self.request.get("input_2c", "input_2t"))
+        user.schedule.append(self.request.get("input_3c", "input_3t"))
+        user.schedule.append(self.request.get("input_4c", "input_4t"))
+        user.schedule.append(self.request.get("input_5c", "input_5t"))
+        user.schedule.append(self.request.get("input_6c", "input_6t"))
+
+        user.put()
+
+
+
     def get(self):
-        template = jinja_environment.get_template('pag3dropdown.html')
+        template = jinja_environment.get_template('pg3.html')
         self.response.out.write(template.render())
 
 class AboutUsHandler(webapp2.RequestHandler):
