@@ -3,5 +3,9 @@
 .DS_Store
 rollcall-211816/main.pyc
 .DS_Store
+<<<<<<< HEAD
 .DS_Store
 rollcall-211816/.DS_Store
+=======
+rollcall-211816/templates/pg2.html
+>>>>>>> 75a017086a0b5b836ea7f368e31529f2678aaec8
