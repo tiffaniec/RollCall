@@ -145,15 +145,15 @@ footer{
 /* Add a black background color to the top navigation */
 
 .collapsible {
-    background-color: #F1EDEE;
+    background-color: white;
     color: #686963;
     cursor: pointer;
     padding: 18px;
     width: 80%;
-    /* border-bottom: solid, #686963; */
     text-align: left;
     outline: none;
     font-size: 20px;
+    border: none;
     border-bottom: 3px solid #3D5467;
     width: 100%
 }
@@ -161,6 +161,7 @@ footer{
 
 .active, .collapsible:hover {
     background-color: #8AA29E;
+    color: white;
 }
 
 .content {

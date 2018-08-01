@@ -84,6 +84,8 @@ class pg3Handler(webapp2.RequestHandler):
 
         user.put()
 
+
+
     def get(self):
         template = jinja_environment.get_template('pg3.html')
         self.response.out.write(template.render())
