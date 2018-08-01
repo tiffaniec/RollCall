@@ -123,7 +123,9 @@ body{
   margin-left: 80px;
 
 }
-
+.classInputCont{
+  padding-left: 20px;
+}
 #per1.text{
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
