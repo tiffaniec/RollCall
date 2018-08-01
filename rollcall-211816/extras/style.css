@@ -100,8 +100,15 @@ div {
       color:white;
       border: none;
     }
-
-.i {
+  .triangle-down {
+  	width: 0;
+  	height: 0;
+    display: inline-block;
+  	border-left: 20px solid#555;
+  	border-right: 20px solid#555;
+  	border-top: 50px solid transparent;
+  }
+i {
     border:#3D5467;
     border-width: 0 3px 3px 0;
     display: inline-block;
@@ -156,6 +163,20 @@ footer{
     border: none;
     border-bottom: 3px solid #3D5467;
     width: 100%
+}
+.v{
+  display:inline-block;
+  font-size: 25px;
+  float: right;
+  color: #3D5467;
+  margin-right: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+.v:hover{
+  display:inline-block;
+  font-size: 25px;
+  float: right;
+  color: white;
 }
 
 
