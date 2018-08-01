@@ -1,10 +1,12 @@
+
 body{
-  /* background-image: url(overlayWeb.jpg); */
+  /* background-image: url(imageedit_11_5105301588.png);  */
   background-color:  #8AA29E;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  padding:0;
-  margin:0;
+
+  margin-right: 115px;
+  margin-left: 115px;
 }
 header{
   font-size: 65px;
@@ -15,6 +17,9 @@ header{
   padding: 0;
 }
 
+.descript{
+  color: white;
+}
 
 h1{
   margin-bottom: 0;
@@ -40,10 +45,7 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
-div {
-    margin-right: 150px;
-    margin-left: 80px;
-}
+
 .button {
     background-color: white;
     border: none;
@@ -80,6 +82,14 @@ div {
   padding-top: 15px;
 
 }
+p{
+  color: #8AA29E;
+  font-family: 'Open Sans', sans-serif;
+  margin:0;
+  padding:none;
+  margin-bottom: 1%;
+
+}
 footer{
   position: fixed;
   left: 0;
@@ -89,4 +99,5 @@ footer{
   color:#686963 ;
   text-align:left;
   padding-left: 15px;
+
 }
