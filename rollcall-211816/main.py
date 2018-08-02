@@ -19,7 +19,7 @@ import webapp2, os, jinja2
 from google.appengine.api import users #Google login
 from google.appengine.ext import ndb #Cloud storage
 
-#Say where you are keeping your HTML templates for Jinja2
+#Say where you are keeping your HTML tempates for Jinja2
 template_directory = os.path.join(os.path.dirname(__file__), 'templates')
 #Create a Jinja environment object by passing it the template location
 jinja_environment = jinja2.Environment(loader = jinja2.FileSystemLoader(template_directory))
@@ -127,8 +127,6 @@ class pg3Handler(webapp2.RequestHandler):
             master_attenlist.append(atten_list)
             n = n+2
 
-        print(master_attenlist)
-
         atten_1 = master_attenlist[0]
         atten_2 = master_attenlist[1]
         atten_3 = master_attenlist[2]
@@ -136,11 +134,8 @@ class pg3Handler(webapp2.RequestHandler):
         atten_5 = master_attenlist[4]
         atten_6 = master_attenlist[5]
 
-
-
-    def get(self):
         template = jinja_environment.get_template('pg3.html')
-        self.response.out.write(template.render())
+        self.response.out.write(template.render(atten_1 = atten_1, atten_2 = atten_2, atten_3 = atten_3, atten_4 = atten_4, atten_5 = atten_5, atten_6 = atten_6))
 
 class AboutUsHandler(webapp2.RequestHandler):
     def get(self):
