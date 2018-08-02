@@ -1,6 +1,5 @@
 
 body{
-  /* background-image: url(imageedit_11_5105301588.png);  */
   background-color:  #8AA29E;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
@@ -8,6 +7,7 @@ body{
   margin-right: 115px;
   margin-left: 115px;
 }
+
 header{
   font-size: 65px;
   color: white;
