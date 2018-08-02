@@ -170,7 +170,7 @@ footer{
   display:inline-block;
   font-size: 25px;
   float: right;
-  color: #3D5467;
+  color: #686963;
   margin-right: 5px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -191,6 +191,7 @@ footer{
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
+
 }
 h5{
   background-color: #white;
