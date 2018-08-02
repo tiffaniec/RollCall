@@ -43,6 +43,7 @@ class MainHandler(webapp2.RequestHandler):
             # # self.response.out.write(template.render(url = url, url_text = url_text, kind = type, name = user_name, items = items)
 
             q_usr_exist = Student.query(Student.name == nickname)
+
             if q_usr_exist.get() is None:
                 std_current = Student(name = nickname, schedule =[], classID = 1, teacher =[])
                 std_current.put()
@@ -67,7 +68,6 @@ class pg3Handler(webapp2.RequestHandler):
     def get_user(self):
         currentUser = users.get_current_user() #Check if logged in or not
         nickname = currentUser.nickname()
-        print(nickname)
         query = Student.query(Student.name == nickname)
         return query.get()
 
@@ -103,16 +103,39 @@ class pg3Handler(webapp2.RequestHandler):
         user.teacher.append(a_5t)
         user.teacher.append(a_6t)
 
-
-        print(user.teacher)
-        print(user.schedule)
         user.put()
 
+        all_students = Student.query(Student.classID == 1)
+        current_student = self.get_user()
+        user_sched = current_student.schedule
+        user_teacher = current_student.teacher
 
-        # 
-        # all_students = Students.query(Student.classID == 1)
-        # current_student = self.get_user()
-        # user_sched = current_student.schedule
+        n = 1
+        master_attenlist = []
+        for each_class in user_sched:
+            atten_list = [] #create attendace list
+            n = n-1 #create the correct index value for each iteration
+            for each_student in all_students:
+                other_sched = each_student.schedule
+                other_teacher = each_student.teacher
+
+                if user_sched[n] == other_sched[n] and user_teacher[n] == other_teacher[n]:
+                    atten_list.append(each_student.name)
+
+                else:
+                    continue
+            master_attenlist.append(atten_list)
+            n = n+2
+
+        print(master_attenlist)
+
+        atten_1 = master_attenlist[0]
+        atten_2 = master_attenlist[1]
+        atten_3 = master_attenlist[2]
+        atten_4 = master_attenlist[3]
+        atten_5 = master_attenlist[4]
+        atten_6 = master_attenlist[5]
+
 
 
     def get(self):
