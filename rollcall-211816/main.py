@@ -110,11 +110,11 @@ class pg3Handler(webapp2.RequestHandler):
         user_sched = current_student.schedule
         user_teacher = current_student.teacher
 
-        n = 1
+        n = 0
         master_attenlist = []
         for each_class in user_sched:
             atten_list = [] #create attendace list
-            n = n-1 #create the correct index value for each iteration
+         #create the correct index value for each iteration
             for each_student in all_students:
                 other_sched = each_student.schedule
                 other_teacher = each_student.teacher
