@@ -3,7 +3,6 @@ body{
   background-color:  #8AA29E;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-
   margin-right: 115px;
   margin-left: 115px;
 }
@@ -16,9 +15,12 @@ header{
   margin-bottom: 2px  ;
   padding: 0;
 }
-
 .descript{
   color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+div{
+  text-align: center;
 }
 
 h1{
