@@ -42,55 +42,57 @@
 
 
   <div class="dropdown">
-    <button class="collapsible">
-    Period 1
-      <div class = "v"> V</div></button>
+
+    <button class="collapsible">Period 1<div class = "v"> V</div></button>
     <div class="content">
-      <p hresf="#">John D '19'</p>
-      <p href="#">Jane D '20'</p>
-      <p href="#">Dolby Atmos '21'</p>
+      {% for each_name in atten_1 %}
+        {{ each_name }}
+      {% endfor %}
       <h5><p href="#">Hilifiger T '19'</p></h5>
-
-
     </div>
+
     <button class="collapsible">Period 2
       <div class = "v"> V</div></button>
     <div class="content">
-      <!-- {% for each_name in atten_2 %}
+      {% for each_name in atten_2 %}
         {{ each_name }}
-      {% endfor %} -->
+      {% endfor %}
       <h5><p href="#">Hilifiger T '19'</p></h5>
     </div>
+
     <button class="collapsible">Period 3
       <div class = "v"> V</div></button>
     <div class="content">
-      <p hresf="#">John D '19'</p>
-      <p href="#">Jane D '20'</p>
-      <p href="#">Dolby Atmos '21'</p>
+      {% for each_name in atten_3 %}
+        {{ each_name }}
+      {% endfor %}
       <h5><p href="#">Hilifiger T '19'</p></h5>
     </div>
+
     <button class="collapsible">Period 4
       <div class = "v"> V</div></button>
     <div class="content">
-      <p hresf="#">John D '19'</p>
-      <p href="#">Jane D '20'</p>
-      <p href="#">Dolby Atmos '21'</p>
+      {% for each_name in atten_4 %}
+        {{ each_name }}
+      {% endfor %}
       <h5><p href="#">Hilifiger T '19'</p></h5>
     </div>
+
     <button class="collapsible">Period 5
       <div class = "v"> V</div></button>
     <div class="content">
-      <p hresf="#">John D '19'</p>
-      <p href="#">Jane D '20'</p>
-      <p href="#">Dolby Atmos '21'</p>
+      {% for each_name in atten_5 %}
+        {{ each_name }}
+      {% endfor %}
       <h5><p href="#">Hilifiger T '19'</p></h5>
     </div>
+
     <button class="collapsible">Period 6
       <div class = "v"> V</div></button>
     <div class="content">
-      <p hresf="#">John D '19'</p>
-      <p href="#">Jane D '20'</p>
-      <p href="#">Dolby Atmos '21'</p>
+      {% for each_name in atten_5 %}
+        {{ each_name }}
+      {% endfor %}
       <h5><p href="#">Hilifiger T '19'</p></h5>
     </div>
 
