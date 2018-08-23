@@ -147,7 +147,7 @@ class SeniorAddHandler(webapp2.RequestHandler):
 
     def get(self):
         logout_url = users.create_logout_url('/')
-        template = jinja_environment.get_template('SeniorAdd.html')
+        template = jinja_environment.get_template('senioradd.html')
         self.response.out.write(template.render(url = logout_url))
 
 class AboutUsHandler(webapp2.RequestHandler):
