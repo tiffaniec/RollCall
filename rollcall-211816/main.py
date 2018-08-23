@@ -143,6 +143,13 @@ class pg3Handler(webapp2.RequestHandler):
         template = jinja_environment.get_template('pg3.html')
         self.response.out.write(template.render())
 
+class SeniorAddHandler(webapp2.RequestHandler):
+
+    def get(self):
+        logout_url = users.create_logout_url('/')
+        template = jinja_environment.get_template('SeniorAdd.html')
+        self.response.out.write(template.render(url = logout_url))
+
 class AboutUsHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('aboutUS.html')
@@ -165,6 +172,7 @@ app = webapp2.WSGIApplication([
     ('/AboutUs', AboutUsHandler),
     ('/Contact', ContactHandler),
     ('/howItWorks', HowItWorksHandler),
+    ('/SeniorAdd', SeniorAddHandler),
 ], debug=True)
 
 # #!/usr/bin/env python
