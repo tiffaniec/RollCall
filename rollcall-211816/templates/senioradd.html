@@ -6,6 +6,13 @@
   <link rel="stylesheet" href="../extras/style.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <title>RollCall Page2</title>
+  <script type="text/javascript">
+    function addTextArea() {
+      var div = document.getElementById('div_quotes');
+      div.innerHTML += "<textarea name='new_quote[]' />";
+      div.innerHTML += "\n<br />";
+    }
+  </script>
 </head>
 
 
@@ -41,18 +48,37 @@
         document.getElementById("input_t").value = document.getElementById("input_c").value;
       }
     </script> -->
+    <form method="post">
+      <input type="text" name="input_#c" placeholder="Class Name" /><br />
+      <input type="text" name="input_1t" placeholder="Teacher" /><br/>
+      <div id="div_quotes"></div>
+      <input type="button" value="Add a Course" onClick="addTextArea();">
+      <input type="submit" name="submitted">
+    </form>
 
-      <div class="classInputCont">
+    <div class="classInputCont">
 
-          <form action="/pg3?a_1c=input_1c&a_1t=input_1t&a_2c=input_2c&a_2t=input_2t&a_3c=input_3c&a_3t=input_3t&a_4c=input_4c&a_4t=input_4t&a_5c=input_5c&a_5t=input_5t&a_6c=input_6c&a_6t=input_6t" method="post">
+      <form action="/pg3?a_1c=input_1c&a_1t=input_1t&a_2c=input_2c&a_2t=input_2t&a_3c=input_3c&a_3t=input_3t&a_4c=input_4c&a_4t=input_4t&a_5c=input_5c&a_5t=input_5t&a_6c=input_6c&a_6t=input_6t" method="post">
 
-              <div id="per1">
-                  <label><h4>Course</h4></label>
-                  <input type="text" name="input_1c" placeholder="Class Name" />
-                  <input type="text" name="input_1t" placeholder="Teacher" />
-              </div>
+        <div id="per1">
+          <label><h4>Course</h4></label>
+          <input type="text" name="input_1c" placeholder="Class Name" />
+          <input type="text" name="input_1t" placeholder="Teacher" />
+        </div>
 
-               <div id="per2">
+
+        <button onclick="addClass()">Add a Course</button>
+
+        <p id="addClass"></p>
+
+        <!-- <script>
+      function addClass() {
+        document.getElementById("addClass").innerHTML =""
+
+      }
+    </script> -->
+
+        <!-- <div id="per2">
                 <h4>Period 2</h4>
                   <input type="text" name="input_2c" placeholder="Class Name" />
                   <input type="text" name="input_2t" placeholder="Teacher" />
@@ -80,16 +106,16 @@
                 <h4>Period 6</h4>
                   <input type="text" name="input_6c" placeholder="Class Name" />
                   <input type="text" name="input_6t" placeholder="Teacher" />
-              </div>
+              </div> -->
 
-              <input type="submit" value="Submit">
-          </form>
-        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
 
-        <footer>
-          reserved for copyrights and frequestly asked questions
-          <br>
-          Roll Call was created by Shreya Shriram, Melody Ma,and Tiffanie Chau.
-        </footer>
-  </body>
+    <footer>
+      reserved for copyrights and frequestly asked questions
+      <br> Roll Call was created by Shreya Shriram, Melody Ma,and Tiffanie Chau.
+    </footer>
+</body>
+
 </html>
